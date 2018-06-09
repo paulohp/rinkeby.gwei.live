@@ -7,12 +7,12 @@
     "dev": "node server.js",
     "build": "next build",
     "export": "next export",
-    "prestart": "npm install && next build",
-    "start": "NODE_ENV=production pm2 restart server.js",
+    "prestart": "npm install && next build && pm2 stop server",
+    "start": "NODE_ENV=production pm2 start server.js",
     "restart": "pm2 restart all",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
-  "author": "Ming Cheuk",
+  "author": "Paulo Pires",
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "7.1.5",
