@@ -17,7 +17,7 @@ export default class extends React.Component {
 
   static async getInitialProps ({ req, query }) {
     const { txHash } = query
-    const res = await fetch(`http://api.gwei.live/tx/${txHash}`)
+    const res = await fetch(`https://api.gwei.live/tx/${txHash}`)
     const data = await res.json()
     return { transaction: data }
   }
